@@ -1,0 +1,54 @@
+# Email Configuration Example
+# Copy this file to config.yaml and fill in your details
+
+email:
+  # IMAP server settings
+  imap_server: "imap.gmail.com"
+  imap_port: 993
+  email_address: "your-email@gmail.com"
+  # Use app-specific password for Gmail
+  password: "your-app-password"
+
+  # Email filtering
+  folder: "INBOX"
+  # Only process emails newer than this many days
+  days_to_check: 7
+  # Maximum emails to process in one run
+  max_emails: 50
+
+summarization:
+  # Provider: "openai" or "anthropic"
+  provider: "anthropic"
+
+  # OpenAI settings (if using OpenAI)
+  openai_api_key: "your-openai-api-key"
+  openai_model: "gpt-4-turbo-preview"
+
+  # Anthropic settings (if using Anthropic)
+  anthropic_api_key: "your-anthropic-api-key"
+  anthropic_model: "claude-3-5-sonnet-20241022"
+
+  # Summarization settings
+  max_tokens: 500
+  temperature: 0.3
+  summary_language: "he"  # Hebrew summary
+
+automation:
+  # Run schedule (cron-like)
+  enabled: true
+  # Run every day at 9:00 AM
+  schedule: "09:00"
+
+output:
+  # Where to save summaries
+  output_dir: "summaries"
+  # Output format: "txt", "json", "html", "email"
+  format: "txt"
+
+  # If format is "email", send summary via email
+  send_email: false
+  recipient_email: "your-email@gmail.com"
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "logs/email_summary.log"

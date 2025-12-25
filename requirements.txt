@@ -1,0 +1,21 @@
+# Email handling
+imaplib2==3.6
+email-validator==2.1.0
+
+# AI/NLP for summarization
+openai==1.12.0
+anthropic==0.18.1
+
+# Configuration
+pyyaml==6.0.1
+python-dotenv==1.0.1
+
+# Utilities
+schedule==1.2.1
+tqdm==4.66.1
+
+# Date/Time
+python-dateutil==2.8.2
+
+# Logging
+colorlog==6.8.2
